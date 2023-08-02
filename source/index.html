@@ -94,9 +94,8 @@
                 </div>
               </dl>
             </div>
-            <p class="example__price">Затраты на питание: <span>15&nbsp;000 руб.</span></p>
+            <p class="example__cost">Затраты на питание: <span>15&nbsp;000 руб.</span></p>
           </div>
-          <!--  СЛАЙДЕР С КОТАМИ -->
           <div class="example__comparison slider">
             <div class="slider__container">
               <div class="slider__img slider__img--before">
@@ -111,8 +110,13 @@
               </div>
             </div>
             <div class="slider__change">
-              <input type="range" class="slider" min="1" max="100" value="50" />
-              <div class="slider-button"></div>
+              <div class="slider__change-label">
+                <label class="visually-hidden" for="slider-range">Соотношение вариантов</label>
+                <input class="slider__change-input visually-hidden" id="slider-range" type="range" min="0" max="100" step="1" value="0">
+                <button class="slider__change-pin" type="button">
+                  <span class="visually-hidden">Регулировка.</span>
+                </button>
+              </div>
             </div>
           </div>
         </div>
