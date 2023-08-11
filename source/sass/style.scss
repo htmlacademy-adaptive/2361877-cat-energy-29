@@ -1,3 +1,17 @@
-body {
-  background-color: #067a16;
-}
+//Global
+
+@import "global/variables.scss";
+
+@import "global/fonts.scss";
+
+@import "global/global.scss";
+
+@import "global/utils.scss";
+
+//Blocks
+
+@import "blocks/button.scss";
+
+@import "blocks/wrapper.scss";
+
+@import "blocks/location.scss";
