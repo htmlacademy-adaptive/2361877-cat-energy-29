@@ -3,11 +3,9 @@
 
   display: flex;
   flex-direction: column;
-  width: 320px;
+  min-width: 320px;
   min-height: 100%;
   margin: 0 auto;
-
-  background-color: $light;
 }
 
 .visually-hidden {
