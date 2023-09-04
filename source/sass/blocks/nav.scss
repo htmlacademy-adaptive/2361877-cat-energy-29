@@ -73,3 +73,9 @@
     font-size: 20px;
   }
 }
+
+.header--home .nav__link {
+  @media (min-width: $desktop-width) {
+    color: $light;
+  }
+}
