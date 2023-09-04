@@ -1,13 +1,17 @@
 .intro__wrapper {
   position: relative;
 
-  @media (max-width: 767px) {
+  @media (max-width: $mobile-width-only) {
+    padding: 0 0 30px;
+  }
+
+  @media (max-width: $tablet-width) {
     padding: 0;
   }
 }
 
 .intro--home .intro__wrapper {
-  @media (min-width: 1440px) {
+  @media (min-width: $desktop-width) {
     display: flex;
     flex-wrap: wrap;
     padding-bottom: 53px;
@@ -43,6 +47,7 @@
   font-size: 36px;
   line-height: 36px;
   font-family: $ff-oswald;
+  color: $light;
 }
 
 .intro__slogan {
@@ -96,8 +101,7 @@
   transform: translate(-50%);
 
   @media (min-width: $tablet-width) {
-    position: relative;
-    left: auto;
+    position: static;
 
     width: 244px;
     margin-left: 0;
