@@ -48,6 +48,23 @@
   line-height: 36px;
   font-family: $ff-oswald;
   color: $light;
+
+  @media (min-width: $tablet-width) {
+    padding-right: 234px;
+    padding-left: 120px;
+
+    font-weight: 400;
+    font-size: 60px;
+    line-height: 60px;
+    color: $dark;
+  }
+
+  @media (min-width: $desktop-width) {
+    font-weight: 400;
+    font-size: 60px;
+    line-height: 60px;
+    color: $dark;
+  }
 }
 
 .intro__slogan {
