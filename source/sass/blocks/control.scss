@@ -1,0 +1,35 @@
+.control {
+  display: grid;
+
+  gap: 12px;
+  grid-template-columns: 1fr;
+
+  &--radio {
+    @media (min-width: $tablet-width) {
+      padding: 24px 28px;
+
+      border: 1px solid $gray-border;
+    }
+  }
+
+  &--check {
+    @media (min-width: $tablet-width) {
+      gap: 33px 57px;
+      grid-template-columns: repeat(2, 1fr);
+    }
+
+    @media (min-width: $tablet-width) {
+      gap: 33px 78px;
+      grid-template-columns: repeat(4, 1fr);
+    }
+  }
+}
+
+.control__label {
+  padding-left: 15px;
+
+  font-size: 16px;
+  line-height: 18px;
+  color: $dark-content;
+  text-transform: uppercase;
+}
