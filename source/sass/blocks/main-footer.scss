@@ -1,0 +1,20 @@
+.main-footer {
+  background-color: $basic-gray;
+}
+
+.social__wrapper {
+  display: flex;
+  //  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+
+  @media (min-width: $tablet-width) {
+    align-items: center;
+    width: 168px;
+  }
+}
+
+.social__wrapper img {
+  display: block;
+  margin: 0 auto;
+}
