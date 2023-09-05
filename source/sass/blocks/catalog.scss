@@ -1,7 +1,7 @@
 .catalog__title {
   font-weight: 400;
-  font-size: 16px;
-  line-height: 20px;
+  font-size: 36px;
+  line-height: 36px;
   color: $dark;
 
   @media (min-width: $tablet-width) {
@@ -58,6 +58,16 @@
   color: $dark-content;
   text-transform: uppercase;
   text-decoration: none;
+
+  @media (min-width: $tablet-width) {
+    font-size: 20px;
+    line-height: 24px;
+  }
+
+  @media (min-width: $desktop-width) {
+    font-size: 20px;
+    line-height: 21px;
+  }
 }
 
 .catalog__description {
