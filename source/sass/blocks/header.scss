@@ -29,17 +29,20 @@
   display: block;
   width: 190px;
 
+  background-image: url(../img/svg/logo-mobile-header.svg);
+  background-repeat: no-repeat;
+
   @media (min-width: $tablet-width) {
     width: 174px;
+
+    background-image: url(../img/svg/logo-tablet-header.svg);
   }
 
   @media (min-width: $desktop-width) {
     width: 202px;
-  }
-}
 
-.nav__logo picture {
-  display: block;
+    background-image: url(../img/svg/logo-desktop-header.svg);
+  }
 }
 
 .header-nav {
