@@ -25,26 +25,14 @@
   }
 }
 
-.nav__logo {
-  display: block;
-  width: 190px;
-
-  background-image: url(../img/svg/logo-mobile-header.svg);
-  background-repeat: no-repeat;
+.header__nav {
+  padding: 13px 0;
 
   @media (min-width: $tablet-width) {
-    width: 174px;
-
-    background-image: url(../img/svg/logo-tablet-header.svg);
+    padding-top: 25px;
   }
 
   @media (min-width: $desktop-width) {
-    width: 202px;
-
-    background-image: url(../img/svg/logo-desktop-header.svg);
+    padding-top: 57px;
   }
-}
-
-.header-nav {
-  padding-top: 13px;
 }

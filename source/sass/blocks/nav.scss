@@ -2,6 +2,8 @@
   position: relative;
 
   display: grid;
+  justify-content: space-between;
+  align-items: center;
   min-height: 65px;
 
   grid-template-columns: repeat(2, auto);
@@ -16,42 +18,90 @@
   }
 }
 
-.nav__toggle {
-  //position: relative;
-  //width: 24px;
-  //height: 24px;
-  //background-color: $light;
-  position: absolute;
-  top: 22px;
-  right: 21px;
-  z-index: 2;
-
+.nav__logo {
   display: block;
-  width: 24px;
-  height: 18px;
+  width: 190px;
+  height: 38px;
+
+  @media (min-width: $tablet-width) {
+    width: 174px;
+    height: 50px;
+  }
+
+  @media (min-width: $desktop-width) {
+    width: 202px;
+    height: 59px;
+  }
+}
+
+.nav__logo img {
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+
+.nav__toggle {
+  position: relative;
+
+  width: 30px;
+  height: 30px;
+  margin-right: -2px;
 
   background-color: transparent;
-  border: 0;
-  cursor: pointer;
+  border: none;
 
   @media (min-width: $tablet-width) {
     display: none;
   }
 }
 
-//не работает с js кнопка открыть-закрыть меню!!!!
-
-.nav__toggle--closed::before {
-  content: "";
+.nav__toggle-line {
   position: absolute;
-  top: 2px;
+  top: 46%;
+  left: 50%;
 
   width: 24px;
   height: 2px;
-  margin-top: 22px;
 
   background-color: $dark;
-  box-shadow: 0 8px 0 0 $dark, 0 16px 0 0 $dark;
+  transform: translate(-50%, -50%);
+
+  &::before,
+  &::after {
+    content: "";
+    position: absolute;
+    left: 50%;
+
+    width: 24px;
+    height: 2px;
+
+    background-color: $dark;
+    transform: translateX(-50%);
+  }
+
+  &::before {
+    top: 8px;
+  }
+
+  &::after {
+    top: -8px;
+  }
+}
+
+.nav.is-open .nav__toggle-line {
+  background-color: transparent;
+
+  &::before {
+    top: 50%;
+
+    transform: translate(-35%, -50%) rotate(-46deg);
+  }
+
+  &::after {
+    top: 50%;
+
+    transform: translate(-35%, -50%) rotate(46deg);
+  }
 }
 
 .nav__list {
@@ -73,56 +123,36 @@
     flex-direction: row;
     flex-wrap: wrap;
     justify-content: flex-end;
+    margin-right: 5px;
 
     background-color: transparent;
 
     gap: 33px;
   }
+
+  @media (min-width: $desktop-width) {
+    margin-right: 0;
+
+    gap: 34px;
+  }
 }
 
-.nav .is-open .nav__list {
+.nav.is-open .nav__list {
   display: flex;
-  align-items: center;
-}
-
-.header-nav .nav .is-open {
-  &::before,
-  &::after {
-    content: "";
-    position: absolute;
-
-    width: 25px;
-    height: 2px;
-    margin-top: 19px;
-
-    background-color: $dark;
-  }
-
-  &::before {
-    box-shadow: none;
-    transform: rotate(45deg);
-  }
-
-  &::after {
-    transform: rotate(-45deg);
-  }
 }
 
 .nav__item {
-  @media (max-width: 767px) {
-    border-top: 1px solid #e6e6e6;
-  }
-}
+  border-top: 1px solid #e6e6e6;
 
-.nav__item:last-child {
-  @media (max-width: 767px) {
-    border-bottom: 1px solid #e6e6e6;
+  @media (min-width: $tablet-width) {
+    border: none;
   }
 }
 
 .nav__link {
   display: block;
-  padding: 21px 20px 24px;
+  padding-top: 23px;
+  padding-bottom: 22px;
 
   font-size: 20px;
   line-height: 20px;
@@ -132,21 +162,64 @@
   text-decoration: none;
 
   @media (min-width: $tablet-width) {
+    padding: 10px 0;
+
     font-size: 18px;
     line-height: 24px;
   }
 
   @media (min-width: $desktop-width) {
+    padding: 6px 0;
+
     font-size: 20px;
+    line-height: 30px;
   }
 }
 
 .nav__link--current {
-  pointer-events: none;
+  @media (min-width: $tablet-width) {
+    text-decoration: 2px;
+
+    outline: none;
+
+    text-decoration-color: $green;
+    text-decoration-line: underline;
+    text-decoration-style: solid;
+    text-underline-offset: 12px;
+  }
 }
 
 .header--home .nav__link {
   @media (min-width: $desktop-width) {
     color: $light;
+  }
+}
+
+.header--home .nav__link--current {
+  @media (min-width: $desktop-width) {
+    text-decoration-color: inherit;
+  }
+}
+
+.no-js .nav {
+  @media (max-width: 767px) {
+    padding-bottom: 0;
+  }
+}
+
+.no-js .nav__toggle {
+  @media (max-width: 767px) {
+    display: none;
+  }
+}
+
+.no-js .nav__list {
+  @media (max-width: 767px) {
+    position: static;
+
+    display: block;
+    margin: 13px -20px 0;
+
+    grid-column: 1/-1;
   }
 }

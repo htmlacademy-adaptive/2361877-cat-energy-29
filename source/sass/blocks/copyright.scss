@@ -1,29 +1,37 @@
-.copyright__link {
+.copyright {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
   font-size: 16px;
   line-height: 20px;
   font-family: $ff-lato;
   color: $dark-content;
   text-decoration: none;
 
+  gap: 22px;
+
+  @media (min-width: $tablet-width) {
+    margin-left: auto;
+  }
+
+  &:focus {
+    outline: none;
+  }
+
   &:active {
     opacity: 0.3;
   }
 }
 
-.copyright__link svg {
+.copyright svg {
   width: 27px;
   height: 34px;
 
-  color: #666666;
+  fill: #666666;
+}
 
-  fill: currentColor;
-
-  &:hover,
-  :focus {
-    color: $green;
-  }
-
-  &:active {
-    opacity: 0.3;
-  }
+.copyright:hover svg,
+.copyright:focus svg {
+  fill: $green;
 }

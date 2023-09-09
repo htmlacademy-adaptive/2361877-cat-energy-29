@@ -1,29 +1,6 @@
-.social__wrapper {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-between;
-  align-items: center;
-
-  @media (min-width: $tablet-width) {
-    align-items: center;
-    width: 168px;
-  }
-}
-
-.social__logo-link img {
-  display: block;
-  width: 100%;
-}
-
-.social__logo-link {
-  display: block;
-  width: 128px;
-}
-
-.social__list {
+.social {
   display: grid;
   justify-content: center;
-  padding: 0;
 
   gap: 24px;
   grid-template-columns: repeat(3, auto);
@@ -41,14 +18,13 @@
   fill: currentColor;
 
   &:hover,
-  :focus {
+  &:focus {
     color: $green;
+
+    outline: none;
   }
 
   &:active {
-    color: $green;
-
-    box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.25);
-    opacity: 0.3;
+    color: rgba(105, 183, 56, 0.3);
   }
 }
