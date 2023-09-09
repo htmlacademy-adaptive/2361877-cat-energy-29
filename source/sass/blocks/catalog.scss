@@ -3,8 +3,8 @@
     margin: 0 -20px;
     padding: 27px 20px 40px;
 
-    border-top: 1px solid #d9d9d9;
-    border-bottom: 1px solid #d9d9d9;
+    border-top: 1px solid $gray;
+    border-bottom: 1px solid $gray;
   }
 
   @media (min-width: $tablet-width) {
@@ -74,7 +74,7 @@
     height: 100%;
     padding: 0 38px 40px;
 
-    background-color: #f2f2f2;
+    background-color: $light;
 
     gap: 21px 0;
     grid-template-columns: 1fr;
@@ -132,7 +132,7 @@
   max-width: 80px;
   margin: 0 0 15px;
 
-  color: #222222;
+  color: $dark-title;
   text-decoration: none;
 
   @media (min-width: $tablet-width) {
@@ -188,7 +188,7 @@
   @media (min-width: $tablet-width) {
     padding: 7px 0 4px;
 
-    border-bottom: 1px solid #cdcdcd;
+    border-bottom: 1px solid $light-gray;
   }
 
   @media (min-width: $desktop-width) {
@@ -225,7 +225,7 @@
     background-color: transparent;
     background-position: top 51px center;
     background-size: 60px 60px;
-    border: 2px solid #f2f2f2;
+    border: 2px solid $light;
   }
 
   @media (min-width: $tablet-width) {
@@ -255,7 +255,7 @@
   font-size: 12px;
   line-height: 16px;
   font-family: $ff-lato;
-  color: #444444;
+  color: $dark-content;
 
   @media (min-width: $tablet-width) {
     max-width: 170px;
@@ -267,9 +267,9 @@
 }
 
 .catalog__item--more .catalog__button {
-  color: #444444;
+  color: $dark-content;
 
-  background-color: #f2f2f2;
+  background-color: $light;
 
   &:hover,
   &:focus {
