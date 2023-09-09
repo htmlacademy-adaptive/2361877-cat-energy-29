@@ -102,10 +102,11 @@
 .programs__content {
   margin: 0 0 19px;
   padding-bottom: 21px;
+
   font-family: $ff-lato;
   color: $dark-content;
 
-  border-bottom: 1px solid $dray;
+  border-bottom: 1px solid $gray;
 
   @media (min-width: $tablet-width) {
     padding-bottom: 32px;
@@ -132,6 +133,7 @@
   color: inherit;
   text-transform: uppercase;
   text-decoration: none;
+
   @media (min-width: $tablet-width) {
     padding-right: 57px;
 
