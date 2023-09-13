@@ -9,11 +9,15 @@
   grid-template-columns: repeat(2, auto);
 
   @media (min-width: $tablet-width) {
+    padding-top: 24px;
+
     gap: 20px;
     grid-template-columns: auto 1fr;
   }
 
   @media (min-width: $desktop-width) {
+    padding-top: 54px;
+
     grid-template-columns: repeat(2, 1fr);
   }
 }
