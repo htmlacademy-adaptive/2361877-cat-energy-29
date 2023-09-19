@@ -1,28 +1,92 @@
-.location--home .location__wrapper {
+.location--home {
   background-color: $light;
 }
 
-.location__contact {
+.location__wrapper {
   position: relative;
+}
+
+.location__contact {
+  display: grid;
+  padding: 26px 0;
+
+  grid-template-columns: 1fr 1fr;
+
+  @media (min-width: $tablet-width) {
+    padding: 61px 40px;
+
+    gap: 308px;
+  }
+
+  @media (min-width: $desktop-width) {
+    position: absolute;
+    top: 94px;
+
+    width: 565px;
+    padding: 61px 80px;
+
+    background-color: $light;
+
+    gap: 10px 90px;
+  }
 }
 
 .location__title {
   margin: 0;
+
+  font-weight: 400;
   font-size: 16px;
   line-height: 20px;
+  color: #111111;
   text-transform: uppercase;
+
+  @media (min-width: $tablet-width) {
+    font-size: 20px;
+    line-height: 26px;
+  }
 }
 
 .location__address {
-  font-style: normal;
+  margin: 0;
+
   font-size: 14px;
   line-height: 20px;
   font-family: $ff-lato;
   color: $dark-content;
+
+  @media (min-width: $tablet-width) {
+    font-size: 16px;
+    line-height: 20px;
+    text-align: right;
+  }
+
+  @media (min-width: $desktop-width) {
+    text-align: left;
+  }
+}
+
+.location__address span {
+  display: block;
+
+  @media (min-width: $tablet-width) {
+    margin-top: 19px;
+  }
 }
 
 .location__iframe-wrapper {
-  height: 400px;
+  display: block;
+  width: 100%;
+  height: 362px;
+
+  @media (min-width: $tablet-width) {
+    height: 400px;
+  }
+}
+
+.location__iframe-wrapper img {
+  display: block;
+  width: 100%;
+  height: 100%;
 }
 
 .location__iframe {
@@ -33,5 +97,10 @@
   display: block;
   width: 100%;
   height: 100%;
+
   border: none;
+}
+
+.no-js .location__iframe {
+  display: none;
 }

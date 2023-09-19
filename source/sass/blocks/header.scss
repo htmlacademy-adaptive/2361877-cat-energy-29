@@ -1,0 +1,64 @@
+.header {
+  @media (min-width: $desktop-width) {
+    position: relative;
+  }
+}
+
+.header--home::after {
+  @media (min-width: $desktop-width) {
+    content: "";
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 50%;
+    z-index: -1;
+
+    margin-bottom: -11px;
+
+    background-image: linear-gradient(
+        rgba(104, 183, 56, 0.85),
+        rgba(104, 183, 56, 0.85)
+      ),
+      url("../img/cat-green-desktop.jpg");
+    background-repeat: no-repeat;
+    background-position: left;
+    background-size: cover;
+  }
+
+  @supports (background-image: url("../img/cat-green-desktop.webp")) {
+    background-image: linear-gradient(
+        rgba(104, 183, 56, 0.85),
+        rgba(104, 183, 56, 0.85)
+      ),
+      url("../img/cat-green-desktop.webp");
+  }
+
+  @media (min-resolution: $retina) {
+    background-image: linear-gradient(
+        rgba(104, 183, 56, 0.85),
+        rgba(104, 183, 56, 0.85)
+      ),
+      url("../img/cat-green-desktop@2x.jpg");
+
+    @supports (background-image: url("./img/cat-green-desktop@2x.webp")) {
+      background-image: linear-gradient(
+          rgba(104, 183, 56, 0.85),
+          rgba(104, 183, 56, 0.85)
+        ),
+        url("../img/cat-green-desktop@2x.webp");
+    }
+  }
+}
+
+.header__nav {
+  padding: 13px 0;
+
+  @media (min-width: $tablet-width) {
+    padding-top: 25px;
+  }
+
+  @media (min-width: $desktop-width) {
+    padding-top: 57px;
+  }
+}
