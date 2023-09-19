@@ -19,60 +19,63 @@
 }
 
 .intro__description {
-  padding: 28px 20px 164px;
+  @media (max-width: 767px) {
+    padding: 28px 20px 164px;
 
-  text-align: center;
-  color: $light;
+    text-align: center;
+    color: $light;
 
-  background-color: $dark-green;
-  background-image: linear-gradient(
-      to top,
-      rgba(104, 183, 56, 0.85),
-      rgba(104, 183, 56, 0.85)
-    ),
-    url("../img/cat-green-mobile.jpg");
-  background-repeat: no-repeat;
-  background-position: center;
-  background-size: auto, cover;
-
-  @supports (background-image: url("./img/cat-green-mobile.webp")) {
+    background-color: $dark-green;
     background-image: linear-gradient(
         to top,
         rgba(104, 183, 56, 0.85),
         rgba(104, 183, 56, 0.85)
       ),
-      url("../img/cat-green-mobile.webp");
-  }
+      url("../img/cat-green-mobile.jpg");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: auto, cover;
 
-  @media (min-resolution: $retina) {
-    background-image: linear-gradient(
-        to top,
-        rgba(104, 183, 56, 0.85),
-        rgba(104, 183, 56, 0.85)
-      ),
-      url("../img/cat-green-mobile@2x.jpg");
-
-    @supports (background-image: url("./img/cat-green-mobile@2x.webp")) {
+    @supports (background-image: url("./img/cat-green-mobile.webp")) {
       background-image: linear-gradient(
           to top,
           rgba(104, 183, 56, 0.85),
           rgba(104, 183, 56, 0.85)
         ),
-        url("../img/cat-green-mobile@2x.webp");
+        url("../img/cat-green-mobile.webp");
     }
 
-    @media (min-width: $tablet-width) {
-      padding: 50px 20px 0 90px;
+    @media (min-resolution: $retina) {
+      background-image: linear-gradient(
+          to top,
+          rgba(104, 183, 56, 0.85),
+          rgba(104, 183, 56, 0.85)
+        ),
+        url("../img/cat-green-mobile@2x.jpg");
 
-      text-align: left;
-      color: $dark;
-
-      background: none;
+      @supports (background-image: url("./img/cat-green-mobile@2x.webp")) {
+        background-image: linear-gradient(
+            to top,
+            rgba(104, 183, 56, 0.85),
+            rgba(104, 183, 56, 0.85)
+          ),
+          url("../img/cat-green-mobile@2x.webp");
+      }
     }
+  }
 
-    @media (min-width: $desktop-width) {
-      padding: 64px 20px 10px 80px;
-    }
+  @media (min-width: $tablet-width) {
+    padding-top: 65px;
+    padding-left: 90px;
+
+    text-align: left;
+    color: $dark;
+
+    background: none;
+  }
+
+  @media (min-width: $desktop-width) {
+    padding: 64px 20px 10px 80px;
   }
 }
 
@@ -88,6 +91,8 @@
     width: 415px;
     height: 120px;
     margin-bottom: 40px;
+
+    text-align: left;
   }
 }
 
@@ -103,6 +108,7 @@
 
     font-size: 20px;
     line-height: 20px;
+    text-align: left;
   }
 }
 
