@@ -5,17 +5,23 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Кэт энерджи</title>
-  <link rel="icon" href="img/favicon.png" type="image/png" sizes="32x32">
   <link rel="icon" href="favicon.ico">
+  <link rel="icon" href="img/svg/favicon.svg" type="image/svg+xml">
+  <link rel="apple-touch-icon" href="img/apple.png">
+  <link rel="manifest" href="manifest.webmanifest">
+  <link rel="preload" href="fonts/lato/latoregular.woff2" as="font" crossorigin="anonymous">
+  <link rel="preload" href="fonts/oswald/oswaldregular.woff2" as="font" crossorigin="anonymous">
+  <link rel="preload" href="fonts/lato/latoregular.woff" as="font" crossorigin="anonymous">
+  <link rel="preload" href="fonts/oswald/oswaldregular.woff" as="font" crossorigin="anonymous">
   <link rel="stylesheet" href="css/style.min.css">
 </head>
 
-<body class="page__body">
+<body class="body no-js">
   <div class="container">
     <header class="header">
       <div class="header__wrapper wrapper">
         <nav class="header-nav nav">
-          <a class="nav__logo logo" href="index.html" aria-current="page">
+          <a class="nav__logo logo" href="index.html">
             <picture>
               <source media="(min-width: 1440px)" srcset="img/svg/logo-desktop-header.svg">
               <source media="(min-width: 768px)" srcset="img/svg/logo-tablet-header.svg">
@@ -27,10 +33,10 @@
           </button>
           <ul class="nav__list list-reset">
             <li class="nav__item">
-              <a class="nav__link" href="index.html" aria-current="page">Главная</a>
+              <a class="nav__link" href="index.html">Главная</a>
             </li>
             <li class="nav__item">
-              <a class="nav__link nav__link--current" href="catalog.html">Каталог продукции</a>
+              <a class="nav__link nav__link--current" href="catalog.html" aria-current="page">Каталог продукции</a>
             </li>
             <li class="nav__item">
               <a class="nav__link" href="form.html">Подбор программы</a>
@@ -343,14 +349,14 @@
               </li>
             </ul>
             <div class="more__offer">
-              <p class="more__offer-content">Закажите<br>все и получите чехол для <br>кота в подарок!</p>
+              <p class="more__offer-content">Закажите все<br>и получите чехол для <br>кота в подарок!</p>
             </div>
           </div>
         </div>
       </section>
     </main>
     <footer class="footer">
-      <section class="footer__location-wrapper location location--home">
+      <section class="footer__location-wrapper location">
         <div class="location__wrapper wrapper">
           <h2 class="visually-hidden">Местонахождение.</h2>
           <div class="location__contact">
@@ -384,8 +390,8 @@
       <section class="footer__links">
         <div class="footer__wrapper wrapper">
           <h2 class="visually-hidden">Социальные сети</h2>
-          <a class="footer__logo">
-            <svg width="128" height="24" role="img" aria-label="Логотип Cat Energe">
+          <a class="footer__logo" href="index.html">
+            <svg width="128" height="24" role="img" aria-label="Логотип Cat Energy">
               <use href="img/sprite.svg#logo-footer"></use>
             </svg>
           </a>

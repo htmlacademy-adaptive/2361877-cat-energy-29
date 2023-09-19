@@ -76,7 +76,7 @@
   }
 
   &:disabled,
-  &:disabled + .form__label {
+  &:disabled + .control__label {
     opacity: 0.3;
 
     pointer-events: none;
@@ -86,7 +86,7 @@
 .control__input--radio {
   border-radius: 50%;
 
-  &:checked:after {
+  &:checked::after {
     content: "";
     position: absolute;
     top: 50%;

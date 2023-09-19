@@ -137,14 +137,55 @@
   background-position: top 59px center, top, top;
   background-size: 78px 80px, auto, cover;
 
-  @media (min-width: $tablet-width) {
-    padding: 56px 20px 52px 60%;
-    text-align: left;
-
+  @supports (background-image: url("./img/cat-green-catalog-mobile.webp")) {
     background-image: url("../img/svg/icon-gift-catalog.svg"),
       linear-gradient(rgba(104, 183, 56, 0.85), rgba(104, 183, 56, 0.85)),
-      url("../img/cat-green-catalog-tablet.jpg");
-    background-position: center left 80px, top, center;
+      url("../img/cat-green-catalog-mobile.webp");
+  }
+
+  @media (min-resolution: $retina) {
+    background-image: url("../img/svg/icon-gift-catalog.svg"),
+      linear-gradient(rgba(104, 183, 56, 0.85), rgba(104, 183, 56, 0.85)),
+      url("../img/cat-green-catalog-mobile@2x.jpg");
+
+    @supports (
+      background-image: url("./img/cat-green-catalog-mobile@2x.webp")
+    ) {
+      background-image: url("../img/svg/icon-gift-catalog.svg"),
+        linear-gradient(rgba(104, 183, 56, 0.85), rgba(104, 183, 56, 0.85)),
+        url("../img/cat-green-catalog-mobile@2x.webp");
+    }
+
+    @media (min-width: $tablet-width) {
+      padding: 56px 20px 52px 60%;
+
+      text-align: left;
+
+      background-image: url("../img/svg/icon-gift-catalog.svg"),
+        linear-gradient(rgba(104, 183, 56, 0.85), rgba(104, 183, 56, 0.85)),
+        url("../img/cat-green-catalog-tablet.jpg");
+      background-position: center left 80px, top, center;
+
+      @supports (background-image: url("./img/cat-green-catalog-tablet.webp")) {
+        background-image: url("../img/svg/icon-gift-catalog.svg"),
+          linear-gradient(rgba(104, 183, 56, 0.85), rgba(104, 183, 56, 0.85)),
+          url("../img/cat-green-catalog-tablet.webp");
+      }
+
+      @media (min-resolution: $retina) {
+        background-image: url("../img/svg/icon-gift-catalog.svg"),
+          linear-gradient(rgba(104, 183, 56, 0.85), rgba(104, 183, 56, 0.85)),
+          url("../img/cat-green-catalog-tablet@2x.jpg");
+
+        @supports (
+          background-image: url("./img/cat-green-catalog-tablet@2x.webp")
+        ) {
+          background-image: url("../img/svg/icon-gift-catalog.svg"),
+            linear-gradient(rgba(104, 183, 56, 0.85), rgba(104, 183, 56, 0.85)),
+            url("../img/cat-green-catalog-tablet@2x.webp");
+        }
+      }
+    }
   }
 
   @media (min-width: $desktop-width) {
@@ -153,6 +194,29 @@
 
     text-align: center;
 
+    background-image: url("../img/svg/icon-gift-catalog.svg"),
+      linear-gradient(rgba(104, 183, 56, 0.85), rgba(104, 183, 56, 0.85)),
+      url("../img/cat-green-catalog-desktop.jpg");
     background-position: top 59px center, top, top;
+
+    @supports (background-image: url("./img/cat-green-catalog-desktop.webp")) {
+      background-image: url("../img/svg/icon-gift-catalog.svg"),
+        linear-gradient(rgba(104, 183, 56, 0.85), rgba(104, 183, 56, 0.85)),
+        url("../img/cat-green-catalog-desktop.webp");
+    }
+
+    @media (min-resolution: $retina) {
+      background-image: url("../img/svg/icon-gift-catalog.svg"),
+        linear-gradient(rgba(104, 183, 56, 0.85), rgba(104, 183, 56, 0.85)),
+        url("../img/cat-green-catalog-desktop@2x.jpg");
+
+      @supports (
+        background-image: url("./img/cat-green-catalog-desktop@2x.webp")
+      ) {
+        background-image: url("../img/svg/icon-gift-catalog.svg"),
+          linear-gradient(rgba(104, 183, 56, 0.85), rgba(104, 183, 56, 0.85)),
+          url("../img/cat-green-catalog-desktop@2x.webp");
+      }
+    }
   }
 }

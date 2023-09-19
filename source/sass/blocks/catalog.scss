@@ -9,11 +9,11 @@
 
   @media (min-width: $tablet-width) {
     margin-bottom: 42px;
-    padding: 52px 0;
+    padding: 50px 0;
   }
 
   @media (min-width: $desktop-width) {
-    padding-top: 59px;
+    padding-top: 56px;
   }
 }
 
@@ -74,7 +74,7 @@
     height: 100%;
     padding: 0 38px 40px;
 
-    background-color: $light;
+    background-color: $basic-gray;
 
     gap: 21px 0;
     grid-template-columns: 1fr;
@@ -139,11 +139,21 @@
     max-width: 155px;
     margin: 0 auto 14px;
 
-    text-align: center; //
+    text-align: center;
   }
 
   @media (min-width: $desktop-width) {
     margin-bottom: 22px;
+  }
+
+  &:hover,
+  &:focus {
+    outline: none;
+    opacity: 0.6;
+  }
+
+  &:active {
+    opacity: 0.3;
   }
 }
 
@@ -225,10 +235,10 @@
     background-color: transparent;
     background-position: top 51px center;
     background-size: 60px 60px;
-    border: 2px solid $light;
+    border: 2px solid $basic-gray;
   }
 
-  @media (min-width: $tablet-width) {
+  @media (min-width: $desktop-width) {
     padding-top: 152px;
 
     background-position: top 50px center;
@@ -241,10 +251,10 @@
 
   @media (min-width: $tablet-width) {
     max-width: 155px;
-    margin: 0 auto 21px;
+    margin: 0 auto 24px;
   }
 
-  @media (min-width: $tablet-width) {
+  @media (min-width: $desktop-width) {
     margin-bottom: 28px;
   }
 }
@@ -259,7 +269,7 @@
 
   @media (min-width: $tablet-width) {
     max-width: 170px;
-    margin: 0 auto 85px;
+    margin: 0 auto 82px;
 
     font-size: 16px;
     line-height: 18px;
@@ -269,7 +279,7 @@
 .catalog__item--more .catalog__button {
   color: $dark-content;
 
-  background-color: $light;
+  background-color: $basic-gray;
 
   &:hover,
   &:focus {

@@ -1,7 +1,9 @@
 .title-lines {
   position: relative;
+
   margin: 0 -20px;
   overflow: hidden;
+
   font-weight: 400;
   font-size: 24px;
   line-height: 30px;
@@ -10,6 +12,7 @@
   @media (min-width: $tablet-width) {
     margin: 0 -30px;
     padding-left: 30px;
+
     font-size: 36px;
     line-height: 46px;
   }
@@ -24,25 +27,30 @@
     content: "";
     position: absolute;
     top: 18px;
+
     display: inline-block;
     width: 100%;
     height: 2px;
+
     vertical-align: middle;
+
     background-color: $green;
+
     @media (min-width: $tablet-width) {
       top: 25px;
     }
   }
 
-  &:before {
+  &::before {
     display: none;
     margin-left: -100%;
+
     @media (min-width: $tablet-width) {
       display: inline-block;
     }
   }
 
-  &:after {
+  &::after {
     margin-right: -100%;
   }
 }

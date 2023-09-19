@@ -1,5 +1,6 @@
 .slider {
   position: relative;
+
   width: 100%;
   max-width: 280px;
   margin: 0 auto;
@@ -11,6 +12,7 @@
 
 .slider__group {
   position: relative;
+
   min-height: 256px;
   overflow: hidden;
 
@@ -24,10 +26,13 @@
   position: absolute;
   top: 0;
   left: 0;
+
   width: 50%;
   height: 100%;
   overflow: hidden;
+
   background-color: #eaeaea;
+
   @media (min-width: $tablet-width) {
     background-color: transparent;
   }
@@ -64,29 +69,42 @@
   bottom: 0;
   left: 50%;
   z-index: 30;
+
   width: 4px;
-  background-color: #666666;
+
+  color: #666666;
+
+  background-color: currentColor;
   border-radius: 2px;
   transform: translateX(-50%);
+
+  &:hover,
+  &:focus-within {
+    color: #68b738;
+  }
+
+  &:active {
+    color: #5eaa2f;
+  }
 }
 
 .slider__change-pin {
   position: absolute;
   top: 50%;
   left: 50%;
+
   display: flex;
   justify-content: center;
   align-items: center;
   width: 40px;
   height: 40px;
-  color: #666666;
-  background: $light;
-  border: 2px solid #666666;
+
+  color: currentColor;
+
+  border: 2px solid currentColor;
   border-radius: 20px;
   transform: translate(-50%, -50%);
   cursor: pointer;
-}
 
-.slider__change-pin svg {
   fill: currentColor;
 }

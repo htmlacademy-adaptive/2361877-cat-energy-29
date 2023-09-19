@@ -20,20 +20,35 @@
         rgba(104, 183, 56, 0.85),
         rgba(104, 183, 56, 0.85)
       ),
-      url(../img/cat-green-desktop.jpg);
+      url("../img/cat-green-desktop.jpg");
     background-repeat: no-repeat;
     background-position: left;
     background-size: cover;
   }
 
-  //при выставлении ретины пропадает кот на ширине 1440
-  //@media (min-resolution: $retina) {
-  //  background-image: linear-gradient(
-  //      rgba(104, 183, 56, 0.85),
-  //     rgba(104, 183, 56, 0.85)
-  // ),
-  //  url("../img/cat-green-desktop@2x.jpg");
-  // }
+  @supports (background-image: url("../img/cat-green-desktop.webp")) {
+    background-image: linear-gradient(
+        rgba(104, 183, 56, 0.85),
+        rgba(104, 183, 56, 0.85)
+      ),
+      url("../img/cat-green-desktop.webp");
+  }
+
+  @media (min-resolution: $retina) {
+    background-image: linear-gradient(
+        rgba(104, 183, 56, 0.85),
+        rgba(104, 183, 56, 0.85)
+      ),
+      url("../img/cat-green-desktop@2x.jpg");
+
+    @supports (background-image: url("./img/cat-green-desktop@2x.webp")) {
+      background-image: linear-gradient(
+          rgba(104, 183, 56, 0.85),
+          rgba(104, 183, 56, 0.85)
+        ),
+        url("../img/cat-green-desktop@2x.webp");
+    }
+  }
 }
 
 .header__nav {

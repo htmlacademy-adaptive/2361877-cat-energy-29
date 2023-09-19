@@ -4,13 +4,13 @@
   border-top: 1px solid $gray;
 
   @media (min-width: $tablet-width) {
-    padding: 52px 40px 24px;
+    padding: 49px 40px 24px;
 
     border: none;
   }
 
   @media (min-width: $desktop-width) {
-    padding-top: 60px;
+    padding-top: 56px;
   }
 }
 
@@ -217,6 +217,24 @@
   &--valid {
     border-color: $dark-green;
     box-shadow: 0 0 0 1px $dark-green;
+  }
+
+  &:hover {
+    border-color: $light-gray;
+  }
+
+  &:focus {
+    border-color: $dark-content;
+    outline: none;
+    box-shadow: 0 0 0 1px $dark-content;
+  }
+
+  &:disabled {
+    color: $dark-content;
+
+    background-color: $light-gray;
+
+    pointer-events: none;
   }
 }
 
